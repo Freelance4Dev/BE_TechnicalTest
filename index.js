@@ -53,7 +53,7 @@ app.get("/getListCalendar",(req,res)=>{
       if (error) {
          res.send({success:false,message:"Failed"})
       } else {
-          console.log(`Email sent:  ${sendTo} | info : ${info.response}`);
+          console.log(`Email sent:  ${req.body.email} | info : ${info.response}`);
           SendEmailModel.create(req.body)
          .then((event)=>{ 
             res.send({success:true,message:"Success",data:event}) })
