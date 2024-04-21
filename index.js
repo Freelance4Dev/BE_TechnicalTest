@@ -44,7 +44,7 @@ app.get("/getListCalendar",(req,res)=>{
   
   var mailOptions = {
       from: '',
-      to: sendTo,
+      to: req.body.email,
       subject: 'Technical Test',
       html:'<h1>Hi Salam kenal</h1>'
   };
